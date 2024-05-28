@@ -1,5 +1,5 @@
 {
-  "name": "auto-messenger-bot",
+  "name": "auto_assitant_bot_by_max",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "100088249106822",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
