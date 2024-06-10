@@ -37,7 +37,7 @@ setInterval(measurePing, 1000);
 function updateTime() {
   const now = new Date();
   const options = {
-    timeZone: 'Asia/Manila',
+    timeZone: 'Africa/Lagos',
     hour12: true,
     hour: 'numeric',
     minute: 'numeric',
@@ -82,13 +82,13 @@ async function State() {
       }
     } else {
       jsonInput.value = '';
-      showResult('Invalid JSON data. Please check your input.');
+      showResult('➛Invalid JSON data. Please check your input.');
       showAds();
     }
   } catch (parseError) {
     jsonInput.value = '';
     console.error('Error parsing JSON:', parseError);
-    showResult('Error parsing JSON. Please check your input.');
+    showResult('➛Error parsing JSON. Please check your input.');
     showAds();
   } finally {
     setTimeout(() => {
