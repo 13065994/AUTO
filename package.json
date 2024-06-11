@@ -7,7 +7,10 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "hi",
+    "➛「𝐠𝐞𝐫𝐚𝐥𝐝✮𝐛𝐨𝐭"
+  ],
   "author": "100088249106822",
   "license": "ISC",
   "dependencies": {
