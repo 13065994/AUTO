@@ -21,7 +21,7 @@ module.exports.run = async function({
     return;
   }
   api.sendMessage(`🔍 "𝚊𝚜𝚜𝚒𝚜𝚝𝚊𝚗𝚝 𝚊𝚗𝚜𝚠𝚎𝚛𝚜\n____________________\n\n
-❛❴💬 | ${input} ❵❜"`, event.threadID, event.messageID);
+❛❴💬 | ${response} ❵❜"`, event.threadID, event.messageID);
   try {
     const {
       data
