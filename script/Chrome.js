@@ -1,21 +1,15 @@
 const axios = require('axios');
-module.exports.config: {
-    name: "chrome",
-    aliases: ["c", "chromesearch"],
-    version: "2.0",
-    author: "XyryllPanget",
-    role: 0,
-    hasprefix: true,
-    Description: {
-      en: "Search on chrome for a given query."
-    },
-    longDescription: {
-      en: "This command searches chrome for a given query and returns the top 5 results."
-    },
-    guide: {
-      en: "To use this command, type !google <query>."
-    }
-  },
+
+module.exports.config = {
+  name: "chrome",
+  version: "1.0.0",
+  role: 0,
+  hasPrefix: true,
+  usage: '[reply or text]',
+  description: 'Apply code from buildtooldev and pastebin',
+  credits: 'Deveploper',
+  cooldown: 5
+};
   module.exports.run: async function ({ api, event, args }) {
     const query = args.join(' ');
     if (!query) {
