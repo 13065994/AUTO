@@ -27,13 +27,13 @@ module.exports.run = async function({
       let end = start + pages;
       let helpMessage = `Command List:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}. 「 ${prefix}${commands[i]} 」\n`;
+        helpMessage += `\t${i + 1}. ➛「 ${prefix}${commands[i]} 」\n`;
       }
       helpMessage += '\nEvent List:\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}. 「 ${prefix}${eventCommand} 」\n`;
+        helpMessage += `\t${index + 1}. 「 ${eventCommand} 」\n`;
       });
-      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'.`;
+      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'.\n➛𝗰𝗵𝗮𝘁𝗯𝗼𝘁`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
     } else if (!isNaN(input)) {
       const page = parseInt(input);
@@ -46,9 +46,9 @@ module.exports.run = async function({
       }
       helpMessage += '\nEvent List:\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}. 「 ${prefix}${eventCommand} 」\n`;
+        helpMessage += `\t${index + 1}. 「 ${eventCommand} 」\n`;
       });
-      helpMessage += `\nPage ${page} of ${Math.ceil(commands.length / pages)}`;
+      helpMessage += `\nPage ${page} of ${Math.ceil(commands.length / pages)}\n[「旦➫𝚊𝚜𝚜𝚒𝚜𝚝 𝚋𝚘t」]`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
     } else {
       const command = [...Utils.handleEvent, ...Utils.commands].find(([key]) => key.includes(input?.toLowerCase()))?.[1];
