@@ -1,3 +1,5 @@
+const doNotRemove = "gerald autobot™ "
+
 module.exports.config = {
   name: 'help',
   version: '1.0.0',
@@ -33,7 +35,7 @@ module.exports.run = async function({
       eventCommands.forEach((eventCommand, index) => {
         helpMessage += `\t${index + 1}. 「 ${eventCommand} 」\n`;
       });
-      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'.\n➛𝗰𝗵𝗮𝘁𝗯𝗼𝘁`;
+      helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'.\n${doNotRemove}';
       api.sendMessage(helpMessage, event.threadID, event.messageID);
     } else if (!isNaN(input)) {
       const page = parseInt(input);
@@ -91,8 +93,8 @@ module.exports.handleEvent = async function({
     messageID,
     body
   } = event;
-  const message = prefix ? '𝚊𝚜𝚜𝚒𝚜𝚝 𝚋𝚘𝚝\n\n_______________\n🟩⬜🟩𝑏𝑜𝑡 𝑝𝑟𝑒𝑓𝑖𝑥: ' + prefix : "i don't have any prefix,but I'm better than all type of assistance bot";
+  const message = prefix ? '𝚊𝚜𝚜𝚒𝚜𝚝 𝚋𝚘𝚝\n\n_______________\n🟩⬜🟩𝑏𝑜𝑡 𝑝𝑟𝑒𝑓𝑖𝑥: ' + prefix : "i don't have any prefix,but I'm better than all type bot";
   if (body?.toLowerCase().startsWith('prefix')) {
     api.sendMessage(message, threadID, messageID);
-  }
+  
 }
