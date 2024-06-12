@@ -1,15 +1,15 @@
 const fs = global.nodemodule["fs-extra"];
 module.exports.config = {
-  name: "gobot",
-  version: "1.0.1",
-  hasPermssion: 0,
-  credits: "MrTomXxX",
-  description: "gibot",
-  commandCategory: "Noprefix",
-  usages: "noprefix",
-  cooldowns: 5,
+	name: "gobot",
+	version: "1.0.1",
+	role: 0,
+	credits: "cliff",
+	description: "Add user to group by id",
+	hasPrefix: false,
+	usage: "[args]",
+	cooldowns: 5
 };
-module.exports.handleEvent = async function({ api, event, args, Threads, Users }) {
+module.exports.run= async function({ api, event, args, Threads, Users }) {
   var { threadID, messageID, reason } = event;
   const moment = require("moment-timezone");
   const time = moment.tz("Asia/Kolkata").format("HH:MM:ss L");
