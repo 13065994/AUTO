@@ -1,4 +1,4 @@
-const doNotRemove = "gerald autobot™ "
+const doNotRemove = "gerald autobot™ ";
 
 module.exports.config = {
   name: 'help',
@@ -29,7 +29,7 @@ module.exports.run = async function({
       let end = start + pages;
       let helpMessage = `Command List:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}. ➛「 ${prefix}${commands[i]} 」\n`;
+        helpMessage += `\t${i + 1}.╭────────────❍\n╰➤ ~ ❯ ${prefix}${commands[i]}\n`;
       }
       helpMessage += '\nEvent List:\n\n';
       eventCommands.forEach((eventCommand, index) => {
@@ -44,7 +44,8 @@ module.exports.run = async function({
       let end = start + pages;
       let helpMessage = `Command List:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}. 「 ${prefix}${commands[i]} 」\n`;
+        helpMessage += `\t${i + 1}.╭────────────❍\n╰➤ + ❯ ${prefix}${commands[i]}\n`;
+      \n`;
       }
       helpMessage += '\nEvent List:\n\n';
       eventCommands.forEach((eventCommand, index) => {
