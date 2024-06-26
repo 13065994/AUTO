@@ -313,7 +313,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
             }
           }
           if (event.body && !command && event.body?.toLowerCase().startsWith(prefix.toLowerCase())) {
-            api.sendMessage(`the command you used is not the right syntax  ${prefix}help to see the list of available commands.`, event.threadID, event.messageID);
+            api.sendMessage(`✭⊦𝐶𝑜𝑚𝑚𝑎𝑛𝑑 𝑛𝑜𝑡 𝑓𝑜𝑢𝑛𝑑 𝑈𝑠𝑒 ${prefix} ℎ𝑒𝑙𝑝 𝑡𝑜 𝑑𝑖𝑠𝑝𝑙𝑎𝑦 𝑎𝑙𝑙 𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠☜`, event.threadID, event.messageID);
             return;
           }
           if (event.body && command && prefix && event.body?.toLowerCase().startsWith(prefix.toLowerCase()) && !aliases(command)?.name) {
