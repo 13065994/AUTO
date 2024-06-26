@@ -52,10 +52,10 @@ const randomQuotes = [
 
 
 module.exports.config = {
-	name: 'help2',
+	name: 'help',
 	version: '1.0.0',
 	role: 0,
-	hasPrefix: false,
+	hasPrefix: true,
 	aliases: ['help'],
 	description: "Beginner's guide",
 	usage: "Help [page] or [command]",
