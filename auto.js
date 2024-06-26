@@ -317,7 +317,7 @@ async function accountLogin(state, enableCommands = [], prefix, admin = []) {
             return;
           }
           if (event.body && command && prefix && event.body?.toLowerCase().startsWith(prefix.toLowerCase()) && !aliases(command)?.name) {
-            api.sendMessage(`the command '${command}' does not exist,please use ${prefix}help to see my commands `, event.threadID, event.messageID);
+            api.sendMessage(`⛨𝑡ℎ𝑒 𝑐𝑜𝑚𝑚𝑎𝑛𝑑 '${command}' 𝑑𝑜𝑒𝑠 𝑛𝑜𝑡 𝑒𝑥𝑖𝑠𝑡, 𝑝𝑙𝑒𝑎𝑠𝑒 𝑢𝑠𝑒 ${prefix}ℎ𝑒𝑙𝑝 𝑡𝑜 𝑠𝑒𝑒 𝑚𝑦 𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠⛨`, event.threadID, event.messageID);
             return;
           }
           for (const {
