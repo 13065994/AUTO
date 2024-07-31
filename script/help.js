@@ -27,9 +27,9 @@ module.exports.run = async function({
       let page = 1;
       let start = (page - 1) * pages;
       let end = start + pages;
-      let helpMessage = `Command List:\n\n`;
+      let helpMessage = `Command\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}.╭────────────❍\n╰➤ ~ ❯ ${prefix}${commands[i]}\n`;
+        helpMessage += `\t${i + 1}.╭────────────❍\n╰➤[ ${i + 1} ] ❯ ${prefix}${commands[i]}\n`;
       }
       helpMessage += '\nEvent List:\n\n';
       eventCommands.forEach((eventCommand, index) => {
@@ -44,7 +44,7 @@ module.exports.run = async function({
       let end = start + pages;
       let helpMessage = `Command List:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}.╭────────────❍\n╰➤ + ❯ ${prefix}${commands[i]}\n`;
+        helpMessage += `/t╭────────────❍\n╰➤ [ ${i + 1}. ] ${prefix}${commands[i]}\n`;
       \n`;
       }
       helpMessage += '\nEvent List:\n\n';
