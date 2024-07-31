@@ -81,7 +81,7 @@ module.exports.run = async function ({
 			let end = start + pages;
 			let helpMessage = `𝚊𝚜𝚜𝚒𝚜𝚝𝚊𝚗𝚝\n\n====『 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗟𝗜𝗦𝗧 』====\n`;
 			for (let i = start; i < Math.min(end, commands.length); i++) {
-				helpMessage += `\n ✧『 ${i + 1} 』  ${prefix}${commands[i]}\n├──────────────⟡\t`;
+				helpMessage += `\t ╭────────────❍\n╰➤[ ${i + 1} ] ❯ ${prefix}${commands[i]}\n\t`;
 			}
 			helpMessage += '\n\n====『𝗙𝗘𝗔𝗧𝗨𝗥𝗘 𝗟𝗜𝗦𝗧』====\n▱▱▱▱▱▱▱▱▱▱▱▱▱\n\n';
 			eventCommands.forEach((eventCommand, index) => {
